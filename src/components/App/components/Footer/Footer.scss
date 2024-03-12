@@ -1,0 +1,123 @@
+$black: #1D1F22;
+$green: #5ECE7B;
+$grey: #EEEEEE;
+
+.footer {   
+    width: 100%;
+    height: 96px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+    .footer {   
+        height: 100%;
+    }
+}
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .footer__container {
+        gap: 20px;
+        padding: 20px;
+    }
+}
+.footer__logo {
+    display: block;
+    margin-right: 20px;
+    transition: all .1s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 768px) {
+    .footer__logo {
+        display: none;
+    }
+}
+.footer__menu{
+    flex: 1 1 auto;
+    max-width: 300px;
+    height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .footer__menu ul{
+        max-width: none;
+    }
+}
+.footer__menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 64px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;    
+}
+@media screen and (max-width: 768px) {
+    .footer__menu ul{
+        flex: 1 1 auto;
+    }
+}
+@media screen and (max-width: 400px) {
+    .footer__menu ul{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.footer__menu_item {  
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $black;
+    cursor: pointer;  
+    &:hover{
+        color: $green;
+    }
+}
+.footer__slideup {
+    margin-left: 20px;
+}
+.slideup {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    &:hover{
+        .slideup__text {
+            color: $black;
+        }
+        .slideup__button {
+            border: 1px solid $black;
+        }
+    }
+}
+.slideup__text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 500px) {
+    .slideup__text {
+        display: none;
+    }
+}
+.slideup__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.ic_angle-up {
+}

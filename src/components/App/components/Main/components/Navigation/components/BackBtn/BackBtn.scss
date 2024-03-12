@@ -1,0 +1,48 @@
+$black: #1D1F22;
+$green: #5ECE7B;
+$grey: #777777;
+
+.main__backbtn_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.backbtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid $black;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s ease;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width: 992px) {
+    .backbtn {
+        &:hover{
+            background-color: $black;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 3px 3px 5px #616161;
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .backbtn {
+        &:active{
+            background-color: $black;
+            color: #fff;
+        }
+    }
+}
+.ic_angle-left {
+}

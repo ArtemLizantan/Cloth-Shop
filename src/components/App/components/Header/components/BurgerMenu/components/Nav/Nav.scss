@@ -1,0 +1,72 @@
+$black: #1D1F22;
+$green: #5ECE7B;
+$grey: #afafaf;
+
+.hmenu__nav {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    padding: 20px 10px 0px;
+    margin-bottom: 30px;
+    border-top: 1px solid $grey;
+    &::before{
+        content: "Pages";
+        position: absolute;
+        top: 0;
+        left: 5%;
+        font-size: 16px;
+        font-weight: 600;
+        transform: translate(0px, -70%);
+        color: $grey;
+        background-color: #fff;
+    }
+}
+@media (min-width: 900px) {
+    .hmenu__nav {
+        display: none;
+    }
+}
+.menu__nav_item {
+    width: 100%;  
+    padding: 10px;
+    text-transform: uppercase;
+    color: $black;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    border-left: 2px solid transparent;
+    &:first-child{
+        margin-left: 0px;
+    }
+    &:last-child{
+        margin-right: 0px;
+    }
+    &:hover{
+        cursor: pointer;
+        border-left: 2px solid $black;        
+    }
+    &:active{
+        cursor: pointer;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        color: $green;
+        border-left: 2px solid $green;        
+    }
+    &.active{
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        pointer-events: none;
+        color: $green;
+        border-left: 2px solid $green;   
+    }
+}
